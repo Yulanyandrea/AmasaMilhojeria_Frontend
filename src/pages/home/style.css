@@ -51,7 +51,7 @@
   0%   {left:0px; top:300px;}
   50%  {left:0px; top:100px;}
   75%  {left:0px; top:200px;}
-  100% {left:0px; top:183px;}
+  100% {left:0px; top:82px;}
 }
 
 .ContainerHome__button{
@@ -73,8 +73,8 @@
 .ContainerHome__button--btn{
   border-style: none;
   height: 44px;
-  width: 42%;
-  border-radius: 10px;
+  width: 50%;
+  border-radius: 20px;
   background-color: #48240a;
   color: white;
 }
@@ -83,7 +83,7 @@
   background-color: #8b4613;
 }
 
-@media (min-width:1200px) {
+@media screen and (min-width:1200px) {
 
   @keyframes amasaLogo {
     0% { left: 100px; top: 300px; }
@@ -103,14 +103,14 @@
 
   .ContainerHome__text{
     font-size: 35px;
-    position: fixed;
+    position: relative;
   }
 
   @keyframes amasatext {
     0%   {left:0px; top:300px;}
     50%  {left:50px; top:100px;}
     75%  {left:0px; top:200px;}
-    100% {left:320px; top:400px;}
+    100% {left:15px; top:200px;}
   }
 
   .ContainerHome__button{
@@ -118,8 +118,8 @@
   }
 
   .ContainerHome__button--btn{
-    height: 50px;
-    width: 132px;
+    height: 55px;
+    width: 234px;
     font-size: 20px;
   }
 
@@ -127,6 +127,6 @@
     0%   {left:0px; top:300px;}
     50%  {left:0px; top:100px;}
     75%  {left:400px; top:200px;}
-    100% {left:580px; top:500px;}
+    100% {left:500px; top:500px;}
   }
 }
