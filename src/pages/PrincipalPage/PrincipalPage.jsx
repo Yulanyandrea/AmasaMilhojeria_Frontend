@@ -1,5 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheese, faBreadSlice } from '@fortawesome/free-solid-svg-icons';
+import CupCake from '../../components/CupCake/CupCake';
+import Phone from '../../components/Phone/Phone';
 
 import './style.css';
 
@@ -19,6 +21,7 @@ const PrincipalPage = () => {
         <section className="PrincipalPage__section1">
           <button type="submit" className="PrincipalPage__Section1--button" onClick={handleClick}>
             <h2 className="PrincipalPage__section1--text">Nosotros</h2>
+            <CupCake />
             {/* <img src="/images/cake.jpg" alt="" className="PrincipalPage__Section1--img" /> */}
           </button>
         </section>
@@ -35,6 +38,7 @@ const PrincipalPage = () => {
         <section className="PrincipalPage__section4">
           <button type="submit" className="PrincipalPage__Section1--button" onClick={handleClick}>
             <h2 className="PrincipalPage__section4--text">Contactanos</h2>
+            <Phone />
           </button>
         </section>
 

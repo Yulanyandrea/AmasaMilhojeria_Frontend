@@ -4,6 +4,8 @@
 }
 body{
   background-color: #efe6c8;
+  background-image: url('../../../public/images/back.png');
+  background-size: contain;
 }
 
 .PrincipalPageContainer{
@@ -109,5 +111,13 @@ body{
 
 }
 
+@media (min-width:1200px) {
+  .PrincipalPage__title{
+    font-size: 38px;
+  }
+  .PrincipalPage__section{
+    width: 50%;
+  }
+}
 
 
