@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;600&display=swap');
 
+body{
+  background-color: white;
+}
+
 .ContainerHome{
   position: relative;
   z-index: 1;
@@ -10,7 +14,6 @@
 
 .ContainerHome::before{
   content: "";
-  background-image: url('../../../public/images/background.png');
   background-size: contain;
   background-position: center;
   position: fixed;
@@ -89,7 +92,7 @@
     0% { left: 100px; top: 300px; }
     50% { left: 200px; top: 190px; }
     75% { left: 300px; top: 150px; }
-    100% { left: 370px; top: 15px; }
+    100% { left: 370px; top: 10px; }
   }
 
   .ContainerHome__image--img{
@@ -110,7 +113,7 @@
     0%   {left:0px; top:300px;}
     50%  {left:50px; top:100px;}
     75%  {left:0px; top:200px;}
-    100% {left:15px; top:200px;}
+    100% {left:15px; top:160px;}
   }
 
   .ContainerHome__button{
@@ -127,6 +130,6 @@
     0%   {left:0px; top:300px;}
     50%  {left:0px; top:100px;}
     75%  {left:400px; top:200px;}
-    100% {left:500px; top:500px;}
+    100% {left:500px; top:400px;}
   }
 }
