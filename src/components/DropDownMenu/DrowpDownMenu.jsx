@@ -10,13 +10,17 @@ const DropdownMenu = ({ menuItems }) => {
   };
 
   return (
-    <div className="dropdown">
-      <button type="submit" className="dropdown__Section1--button" onClick={toggleDropdown}>
+    <section className="dropdown">
+      <section className="dropdpwn__section">
         <img src="/images/cake2.png" alt="" className="dropdown__section2--logo" />
         <h2 className="dropdown__section2--text">Milhojas</h2>
-        <span className={isOpen ? 'arrow up' : 'arrow down'} />
+        <button type="submit" className="dropdown__Section1--button" onClick={toggleDropdown}>
+          <p className="dropdown__Section1--buttonText">{'>'}</p>
+          <span className={isOpen ? 'arrow up' : 'arrow down'} />
 
-      </button>
+        </button>
+      </section>
+
       <ul className={isOpen ? 'dropdown-menu show' : 'dropdown-menu'}>
         {menuItems.map((item) => (
           <li key={item.id}>
@@ -24,7 +28,7 @@ const DropdownMenu = ({ menuItems }) => {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 

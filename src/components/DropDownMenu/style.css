@@ -3,10 +3,19 @@
   display: inline-block;
 }
 
+.dropdpwn__section{
+  display: flex;
+  flex-direction: row;
+}
+
+.dropdown__section2--logo{
+  width: 32%;
+}
+
 .dropdown__Section1--button{
   border-style: none;
   font-size: 12px;
-  background-color:#efe6c8;
+  background-color:white;
   border-radius: 20px;
   width: 50%;
   height: 44px;
@@ -15,9 +24,11 @@
   align-items: center;
 }
 
-.dropdown__section2--logo{
-  width: 32%;
+.dropdown__Section1--buttonText{
+  font-size: 45px;
+  color: #afadad;
 }
+
 .dropdown-menu {
   display: none;
   position: absolute;
