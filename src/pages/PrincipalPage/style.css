@@ -11,6 +11,22 @@
   align-items: center;
 }
 
+.PrincipalPage{
+  padding-top: 27px;
+}
+
+.PrincipalPage__Principaltitle{
+  display: flex;
+}
+
+.PrincipalPage__Principaltitle--icon2{
+  padding: 3px;
+}
+
+.PrincipalPage__title{
+  margin: auto;
+}
+
 .PrincipalPage__line{
   border-bottom:solid 1px grey;
   width:100%;
