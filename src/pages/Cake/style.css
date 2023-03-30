@@ -1,0 +1,33 @@
+.containerCake{
+  display: flex;
+  position: relative;
+  top: 104px;
+}
+
+.containerCake__side1{
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  position: relative;
+  top: -101px;
+}
+
+.containerCake__side2{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.containerCake__image{
+  width: 100%;
+}
+
+.containerCake__amount{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.containerCake__amount--am{
+  padding: 5px;
+}

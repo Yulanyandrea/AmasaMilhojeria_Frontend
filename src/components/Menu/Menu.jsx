@@ -6,7 +6,12 @@ const Menu = () => {
 
   const handleBocado = (e) => {
     e.preventDefault();
-    navigate('/milhoja_bocado');
+    navigate('/milhojas_bocado');
+  };
+
+  const handleTorta = (e) => {
+    e.preventDefault();
+    navigate('/milhojas_torta');
   };
   return (
     <section className="menu">
@@ -19,7 +24,7 @@ const Menu = () => {
       </section>
 
       <section className="menu__btn">
-        <button type="submit" className="menu__button--smallSize">Torta</button>
+        <button type="submit" className="menu__button--smallSize" onClick={handleTorta}>Torta</button>
       </section>
     </section>
 
