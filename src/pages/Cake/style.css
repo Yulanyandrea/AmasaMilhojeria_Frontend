@@ -32,6 +32,17 @@
   padding: 5px;
 }
 
+.containerCake__submitBtn--sub{
+  border-style: none;
+  height: 34px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.containerCake__submitBtn--sub:hover{
+  background-color: #f5f5dc;
+}
+
 @media(min-width:1200px){
   .containerCake{
     justify-content: center;
