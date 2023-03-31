@@ -10,8 +10,9 @@ const Header = () => {
         <h1 className="containerHeader__title">Amasa Milhojeria</h1>
       </section>
       <section className="containerHeader__shoppingCart">
+        <button type="submit" className="containerHeader__shoppingCart--home">Inicio</button>
         <button type="submit" className="containerHeader__shoppingCart--btn">
-          <FontAwesomeIcon icon={faCartShopping} />
+          <FontAwesomeIcon icon={faCartShopping} className="containerHeader__shoppingCart--btnIcon" />
         </button>
       </section>
     </section>
