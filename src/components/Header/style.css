@@ -1,0 +1,12 @@
+.containerHeader{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.containerHeader__image{
+  width: 7%;
+}
+
+.containerHeader__title{
+  margin: unset;
+}
