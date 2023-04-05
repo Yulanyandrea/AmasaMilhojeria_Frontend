@@ -4,6 +4,11 @@ import './style.css';
 const Menu = () => {
   const navigate = useNavigate();
 
+  const handlePersonal = (e) => {
+    e.preventDefault();
+    navigate('/milhojas_personal');
+  };
+
   const handleBocado = (e) => {
     e.preventDefault();
     navigate('/milhojas_bocado');
@@ -20,7 +25,7 @@ const Menu = () => {
       </section>
 
       <section className="menu__btn">
-        <button type="submit" className="menu__button--smallSize">Personal</button>
+        <button type="submit" className="menu__button--smallSize" onClick={handlePersonal}>Personal</button>
       </section>
 
       <section className="menu__btn">
