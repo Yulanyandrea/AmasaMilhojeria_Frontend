@@ -4,6 +4,7 @@ import PrincipalPage from './pages/PrincipalPage/PrincipalPage';
 import Menu from './components/Menu/Menu';
 import './App.css';
 import Cake from './pages/Cake/Cake';
+import Personal from './pages/Personal/Personal';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/Amasa_Home" element={<PrincipalPage />} />
         <Route path="/milhojas_bocado" element={<Menu />} />
         <Route path="/milhojas_torta" element={<Cake />} />
+        <Route path="/milhojas_personal" element={<Personal />} />
       </Routes>
 
     </div>
