@@ -1,7 +1,7 @@
 .containerCake{
   display: flex;
   position: relative;
-  top: 104px;
+  top: 59px;
 }
 
 .containerCake__side1{
@@ -30,4 +30,25 @@
 
 .containerCake__amount--am{
   padding: 5px;
+}
+
+.containerCake__submitBtn--sub{
+  border-style: none;
+  height: 34px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.containerCake__submitBtn--sub:hover{
+  background-color: #f5f5dc;
+}
+
+@media(min-width:1200px){
+  .containerCake{
+    justify-content: center;
+  }
+
+  .containerCake__side1{
+    width: 17%;
+  }
 }
