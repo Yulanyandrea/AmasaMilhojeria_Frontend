@@ -6,12 +6,12 @@ const Menu = () => {
 
   const handlePersonal = (e) => {
     e.preventDefault();
-    router.push('/milhojas_personal');
+    router.push('/Personal/Personal');
   };
 
   const handleBocado = (e) => {
     e.preventDefault();
-    router.push('/milhojas_bocado');
+    router.push('/HalfCake/HalfCake');
   };
 
   const handleTorta = (e) => {
