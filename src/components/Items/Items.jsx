@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Menu from '../Menu/Menu';
-import './style.css';
+import items from './items.module.css'
 
 const Items = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,26 +10,26 @@ const Items = () => {
   };
 
   return (
-    <section className="dropdown">
-      <section className="dropdpwn__section">
-        <h2 className="dropdown__section2--text">Milhojas</h2>
+    <section className={items.dropdown}>
+      <section className={items.dropdpwn__section}>
+        <h2 className={items["dropdown__section2--text"]}>Milhojas</h2>
 
         {
             isOpen === true
               ? (
                 <>
-                  <div className="dropdown__section2--line" style={{ width: '28%' }} />
-                  <button type="submit" className="dropdown__Section1--button" onClick={toggleDropdown}>
-                    <p className="dropdown__Section1--buttonText">v</p>
+                  <div className={items["dropdown__section2--line"]} style={{ width: '28%' }} />
+                  <button type="submit" className={items["dropdown__Section1--button"]} onClick={toggleDropdown}>
+                    <p className={items["dropdown__Section1--buttonText"]}>v</p>
                   </button>
                   <Menu />
                 </>
               )
               : (
                 <>
-                  <div className="dropdown__section2--line" style={{ width: '78%' }} />
-                  <button type="submit" className="dropdown__Section1--button" onClick={toggleDropdown}>
-                    <p className="dropdown__Section1--buttonText">{'>'}</p>
+                  <div className={items["dropdown__section2--line"] }style={{ width: '78%' }} />
+                  <button type="submit" className={items["dropdown__Section1--button"]} onClick={toggleDropdown}>
+                    <p className={items["dropdown__Section1--buttonText"]}>{'>'}</p>
                   </button>
                 </>
               )
