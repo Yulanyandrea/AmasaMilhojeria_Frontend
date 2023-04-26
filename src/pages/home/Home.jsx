@@ -1,23 +1,24 @@
-import { useNavigate } from 'react-router-dom';
-import './style.css';
+import Image from 'next/image';
+import { useRouter } from 'next/router'
+import home from './home.module.css'
 
 const Home = () => {
-  const navigate = useNavigate();
+  const router = useRouter()
   const handleClick = (e) => {
     e.preventDefault();
-    navigate('/Amasa_Home');
+    router.push('/PrincipalPage/PrincipalPage');
   };
   return (
-    <section className="ContainerHome">
-      <div className="ContainerHome__image">
-        <img src="/images/amasaLogo.png" alt="" className="ContainerHome__image--img" />
+    <section className={home.ContainerHome}>
+      <div className={home.ContainerHome__image}>
+        <Image src="/images/amasaLogo.png" alt="" className={home["ContainerHome__image--img"]} width={500} height={500}/>
       </div>
-      <div className="ContainerHome__text">
-        <p className="ContainerHome__text">Milhojas armadas al instante</p>
+      <div className={home.ContainerHome__text}>
+        <p className={home.ContainerHome__text}>Milhojas armadas al instante</p>
 
       </div>
-      <div className="ContainerHome__button">
-        <button type="submit" className="ContainerHome__button--btn" onClick={handleClick}>Ingresar</button>
+      <div className={home.ContainerHome__button}>
+        <button type="submit" className={home["ContainerHome__button--btn"]} onClick={handleClick}>Ingresar</button>
       </div>
 
     </section>

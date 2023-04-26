@@ -1,35 +1,35 @@
-import { useNavigate } from 'react-router-dom';
-import './style.css';
+import { useRouter } from 'next/router';
+import menu from './menu.module.css';
 
 const Menu = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const handlePersonal = (e) => {
     e.preventDefault();
-    navigate('/milhojas_personal');
+    router.push('/milhojas_personal');
   };
 
   const handleBocado = (e) => {
     e.preventDefault();
-    navigate('/milhojas_bocado');
+    router.push('/milhojas_bocado');
   };
 
   const handleTorta = (e) => {
     e.preventDefault();
-    navigate('/milhojas_torta');
+    router.push('/Cake/Cake');
   };
   return (
-    <section className="menu">
-      <section className="menu__btn">
-        <button type="submit" className="menu__button--smallSize" onClick={handleBocado}>Bocado</button>
+    <section className={menu.menu}>
+      <section className={menu.menu__btn}>
+        <button type="submit" className={menu["menu__button--smallSize"]} onClick={handleBocado}>Bocado</button>
       </section>
 
-      <section className="menu__btn">
-        <button type="submit" className="menu__button--smallSize" onClick={handlePersonal}>Personal</button>
+      <section className={menu.menu__btn}>
+        <button type="submit" className={menu["menu__button--smallSize"]} onClick={handlePersonal}>Personal</button>
       </section>
 
-      <section className="menu__btn">
-        <button type="submit" className="menu__button--smallSize" onClick={handleTorta}>Torta</button>
+      <section className={menu.menu__btn}>
+        <button type="submit" className={menu["menu__button--smallSize"]} onClick={handleTorta}>Torta</button>
       </section>
     </section>
 
