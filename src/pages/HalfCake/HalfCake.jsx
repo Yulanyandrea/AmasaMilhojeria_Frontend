@@ -1,4 +1,5 @@
 import Header from '../../components/Header/Header';
+import Image from 'next/image';
 
 const HalfCake = () => {
   return (
@@ -14,7 +15,7 @@ const HalfCake = () => {
 
         </aside>
         <aside className="containerCake__side2">
-          <img src="./images/bocado.png" alt="" className="containerCake__image" />
+          <Image src="./images/bocado.png" alt="" className="containerCake__image" />
           <section className="containerCake__description">
             <title className="containerCake__title">Arandanos</title>
             <p className="containerCake___detail">detalles del producto</p>
