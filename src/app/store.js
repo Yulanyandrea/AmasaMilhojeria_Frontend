@@ -1,11 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import productReducer from '../feature/products/productSlice';
-import userReducer from '../feature/users/userSlice';
+// import userReducer from '../feature/users/userSlice';
 
 const store = configureStore({
   reducer: {
     products: productReducer,
-    users: userReducer,
   },
   devTools: process.env.NODE_ENV !== 'production',
 });
