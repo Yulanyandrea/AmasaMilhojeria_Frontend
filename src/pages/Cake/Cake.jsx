@@ -1,8 +1,13 @@
 import Header from '../../components/Header/Header';
 import Image from 'next/image';
 import cake from './cake.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { increment } from '../../feature/products/productSlice';
 
 const Cake = () => {
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.products?.numberProducts)
+
   return (
     <>
       <Header />
@@ -23,8 +28,8 @@ const Cake = () => {
           </section>
           <section className={cake.containerCake__amount}>
             <button type="submit" className={cake.containerCake__subtraction}>-</button>
-            <label htmlFor="taste" className={cake["containerCake__amount--am"]}>0</label>
-            <button type="submit" className={cake.containerCake__add}>+</button>
+            <label htmlFor="taste" className={cake["containerCake__amount--am"]}>{data}</label>
+            <button type="submit" className={cake.containerCake__add} onClick={() => dispatch(increment())}>+</button>
           </section>
           <section className={cake.containerCake__submitBtn}>
             <button type="submit" className={cake["containerCake__submitBtn--sub"]}>Agregar</button>
