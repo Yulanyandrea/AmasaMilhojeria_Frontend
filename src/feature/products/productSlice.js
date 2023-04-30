@@ -12,8 +12,13 @@ const productReducer = createSlice({
   reducers:{
     increment:(state,action)=>{
       state.numberProducts +=1;
-    }
+    },
+    decrement:(state,action)=>{
+      state.value-=1;
+    },
   }
 });
+
+export const { increment, decrement } = productReducer.actions;
 
 export default productReducer.reducer;
