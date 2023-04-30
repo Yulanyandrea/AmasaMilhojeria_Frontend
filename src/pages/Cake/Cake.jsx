@@ -2,7 +2,7 @@ import Header from '../../components/Header/Header';
 import Image from 'next/image';
 import cake from './cake.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { increment } from '../../feature/products/productSlice';
+import { increment,decrement } from '../../feature/products/productSlice';
 
 const Cake = () => {
   const dispatch = useDispatch();
@@ -27,7 +27,7 @@ const Cake = () => {
             <p className={cake.containerCake___detail}>detalles del producto</p>
           </section>
           <section className={cake.containerCake__amount}>
-            <button type="submit" className={cake.containerCake__subtraction}>-</button>
+            <button type="submit" className={cake.containerCake__subtraction} onClick={() => dispatch(decrement())}>-</button>
             <label htmlFor="taste" className={cake["containerCake__amount--am"]}>{data}</label>
             <button type="submit" className={cake.containerCake__add} onClick={() => dispatch(increment())}>+</button>
           </section>
