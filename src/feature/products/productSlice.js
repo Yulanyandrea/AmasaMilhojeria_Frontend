@@ -14,7 +14,7 @@ const productReducer = createSlice({
       state.numberProducts +=1;
     },
     decrement:(state,action)=>{
-      state.value-=1;
+      state.numberProducts-=1;
     },
   }
 });
