@@ -1,8 +1,12 @@
 import Header from '../../components/Header/Header';
 import Image from 'next/image';
-import cake from '../Cake/cake.module.css'
+import cake from '../Cake/cake.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { incrementPersonalCake,decrementPersonalCake } from '../../feature/products/productSlice';
 
 const Personal = () => {
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.products?.personalCake)
   return (
     <>
       <Header />
@@ -22,9 +26,9 @@ const Personal = () => {
             <p className={cake.containerCake___detail}>detalles del producto</p>
           </section>
           <section className={cake.containerCake__amount}>
-            <button type="submit" className={cake.containerCake__subtraction}>-</button>
-            <label htmlFor="taste" className={cake["containerCake__amount--am"]}>0</label>
-            <button type="submit" className={cake.containerCake__add}>+</button>
+            <button type="submit" className={cake.containerCake__subtraction} onClick={()=>dispatch(decrementPersonalCake())}>-</button>
+            <label htmlFor="taste" className={cake["containerCake__amount--am"]}>{data}</label>
+            <button type="submit" className={cake.containerCake__add} onClick={()=>dispatch(incrementPersonalCake())}>+</button>
           </section>
           <section className={cake.containerCake__submitBtn}>
             <button type="submit" className={cake["containerCake__submitBtn--sub"]}>Agregar</button>
