@@ -1,4 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { getAllProducts } from './productsApi';
 
 const initialState = {
   cake:0,
@@ -7,6 +8,12 @@ const initialState = {
   products: [],
   status: 'idle',
 };
+
+// get data products
+export const productsData = createAsyncThunk('products/data', async () => {
+  const productNames = getAllProducts();
+  return productNames
+})
 
 const productReducer = createSlice({
   name: 'products',
