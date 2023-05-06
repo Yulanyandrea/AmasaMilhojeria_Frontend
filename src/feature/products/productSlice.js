@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { getAllProducts } from './productsApi';
+import { useQuery } from '@apollo/client';
+import GET_PRODUCTS from './productApi';
 
 const initialState = {
   cake:0,
@@ -11,8 +12,9 @@ const initialState = {
 
 // get data products
 export const productsData = createAsyncThunk('products/data', async () => {
-  const productNames = getAllProducts();
-  return productNames
+  const { loading, error, data } = useQuery(GET_PRODUCTS);
+  console.log('products', data)
+  return data
 })
 
 const productReducer = createSlice({
@@ -40,6 +42,18 @@ const productReducer = createSlice({
     decrementPersonalCake:(state,action)=>{
       state.personalCake-=1;
     },
+  },extraReducers:(builder) => {
+    builder
+    .addCase(productsData.pending, (state) => {
+      state.status = 'loading';
+    })
+    .addCase(productsData.fulfilled, (state, action) => {
+      state.products = action.payload;
+    })
+    .addCase(productsData.rejected, (state) => {
+      state.status = 'reject';
+    })
+
   }
 });
 

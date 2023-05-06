@@ -2,11 +2,16 @@ import Header from '../../components/Header/Header';
 import Image from 'next/image';
 import cake from './cake.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { increment,decrement } from '../../feature/products/productSlice';
+import { increment,decrement,productsData } from '../../feature/products/productSlice';
+import { useEffect } from 'react'
 
 const Cake = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.products?.cake)
+
+  useEffect(() => {
+    dispatch(productsData())
+  },[])
 
   return (
     <>
