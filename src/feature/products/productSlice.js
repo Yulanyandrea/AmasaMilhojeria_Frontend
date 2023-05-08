@@ -1,20 +1,27 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { useQuery } from '@apollo/client';
+import client from './apollo-client'; './apollo-client';
 import GET_PRODUCTS from './productApi';
 
 const initialState = {
   cake:0,
   halfCakeAmount:0,
   personalCake:0,
-  products: [],
+  milhojas: [],
   status: 'idle',
 };
 
 // get data products
 export const productsData = createAsyncThunk('products/data', async () => {
-  const { loading, error, data } = useQuery(GET_PRODUCTS);
-  console.log('products', data)
-  return data
+  try {
+    const { data } = await client.query({
+      query:GET_PRODUCTS
+    });
+    return data
+  } catch (error) {
+    console.error('Error fetching products:', error);
+    throw error;
+
+  }
 })
 
 const productReducer = createSlice({
@@ -48,7 +55,7 @@ const productReducer = createSlice({
       state.status = 'loading';
     })
     .addCase(productsData.fulfilled, (state, action) => {
-      state.products = action.payload;
+      state.milhojas = action.payload;
     })
     .addCase(productsData.rejected, (state) => {
       state.status = 'reject';
