@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { useQuery } from '@apollo/client';
+import client from './apollo-client'; './apollo-client';
 import GET_PRODUCTS from './productApi';
 
 const initialState = {
@@ -12,9 +12,16 @@ const initialState = {
 
 // get data products
 export const productsData = createAsyncThunk('products/data', async () => {
-  const { loading, error, data } = useQuery(GET_PRODUCTS);
-  console.log('products', data)
-  return data
+  try {
+    const { data } = await client.query({
+      query:GET_PRODUCTS
+    });
+    return data
+  } catch (error) {
+    console.error('Error fetching products:', error);
+    throw error;
+
+  }
 })
 
 const productReducer = createSlice({
