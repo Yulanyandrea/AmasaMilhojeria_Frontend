@@ -6,7 +6,7 @@ const initialState = {
   cake:0,
   halfCakeAmount:0,
   personalCake:0,
-  products: [],
+  milhojas: [],
   status: 'idle',
 };
 
@@ -55,7 +55,7 @@ const productReducer = createSlice({
       state.status = 'loading';
     })
     .addCase(productsData.fulfilled, (state, action) => {
-      state.products = action.payload;
+      state.milhojas = action.payload;
     })
     .addCase(productsData.rejected, (state) => {
       state.status = 'reject';
